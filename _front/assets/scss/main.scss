@@ -1,0 +1,97 @@
+/* ------------------------------ */
+/* Importation des configurations */
+/* ------------------------------ */
+@import './config/colors';
+@import './config/responsive';
+
+@import './components/common/socialPartners';
+@import './components/common/carousel';
+@import './components/common/editor';
+@import './components/common/pagination';
+@import './components/common/confirmDeletePop';
+
+@import './components/header';
+@import './components/footer';
+
+@import './components/home/theCarousel';
+@import './components/home/theLastNews';
+@import './components/home/home';
+
+@import './components/blog/blog';
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: $backgroundColor02;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+.background-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+}
+
+ .title-lined {
+   display: flex;
+   align-items: center;
+   color: $titleColor;
+   padding: 0;
+   margin-bottom: 15px;
+   margin-top: 10px;
+
+   h2 {
+     text-align: center;
+     text-transform: uppercase;
+     text-wrap: none;
+     margin: 0 10px;
+   }
+
+   .title-separator-1 {
+     border: 2px solid $titleColor;
+     background-color: $titleColor;
+     width: 5%;
+   }
+
+   .title-separator-2 {
+     border: 2px solid $titleColor;
+     flex: auto;
+     background-color: $titleColor;
+     height: 0;
+   }
+
+ }
+
+ .breadcrumb {
+   background-color: $backgroundColor03;
+   opacity: .8;
+   font-family: 'Comfortaa', sans-serif;
+   border-radius: unset;
+
+   a{
+     color: $titleColor;
+     text-transform: capitalize;
+   }
+
+   span {
+     text-transform: capitalize;
+   }
+
+   a:hover {
+     color: $aHoverRed;
+   }
+ }
+
+

@@ -1,0 +1,168 @@
+
+/* TOP USERS */
+.top-users {
+  display: flex;
+  height: 350px;
+  background-color: $backgroundColor03;
+  text-align: center;
+  color: white;
+
+  .top-user {
+    width: 20%;
+    background-color: $backgroundColor02;
+    margin: 10px 5px;
+    transition: .2s;
+  }
+
+  .top-user:hover {
+    background: $backgroundColor01;
+  }
+
+  .top-user:nth-child(5n+1) {
+    order:3;
+    .top-user-crown {
+      width: 40%;
+      margin-top:-60px;
+      margin-bottom: 10px;
+    }
+    .top-user-rank {
+      color: $rankLegendary;
+    }
+  }
+
+  .top-user:nth-child(5n+2) {
+    order:2;
+    .top-user-crown {
+      width: 35%;
+      margin-top: -45px;
+    }
+    .top-user-rank {
+      color: $rankPlatinium;
+    }
+  }
+
+  .top-user:nth-child(5n+3) {
+    order:4;
+    .top-user-crown {
+      width: 35%;
+      margin-top: -45px;
+    }
+    .top-user-rank {
+      color: $rankGoldElite;
+    }
+  }
+
+  .top-user:nth-child(5n+4) {
+    order:1;
+    .top-user-crown {
+      width: 30%;
+      margin-top: -35px;
+    }
+    .top-user-rank {
+      color: $rankSilverNoob;
+    }
+  }
+
+  .top-user:nth-child(5n+5) {
+    order:5;
+    .top-user-crown {
+      width: 30%;
+      margin-top: -35px;
+    }
+    .top-user-rank {
+      color: $rankCopperDiv;
+    }
+  }
+
+  .top-user-avatar {
+    border-radius: 100%;
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .top-user-name {
+    margin-top: 20px;
+    color: $userName;
+  }
+
+  .top-user-rank {
+    text-transform: uppercase;
+  }
+
+  .top-user-points {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: $userPoints;
+  }
+}
+
+/* STAFF */
+
+.staff {
+  background-color: $backgroundColor03;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+
+  a{
+    color: $userName;
+  }
+
+  h2 {
+    color: $backgroundColor01;
+    text-transform: uppercase;
+    margin: 20px;
+  }
+
+  .staff-group {
+    display: flex;
+    justify-content: space-around;
+    color: white;
+  }
+
+  .staff-member {
+    text-align: center;
+    height: 180px;
+    width: 150px;
+    background-color: $backgroundColor02;
+    margin: 10px 5px;
+    padding: 20px;
+    transition: .2s;
+
+    p {
+      margin-top: 10px;
+    }
+
+    &:hover{
+      background: $backgroundColor01;
+      color: white;
+    }
+
+    .staff-member-avatar {
+      border-radius: 100%;
+      width: 80px;
+      margin: 0 auto;
+    }
+
+    [class*="staff-grade-"] {
+      text-transform: uppercase;
+    }
+
+    .staff-grade-fonda {
+      color: $groupAdmin;
+    }
+
+    .staff-grade-manager {
+      color: $groupManager;
+    }
+
+    .staff-grade-modo {
+      color: $groupModerateur;
+    }
+
+  }
+
+
+
+}

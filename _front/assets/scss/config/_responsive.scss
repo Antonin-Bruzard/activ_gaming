@@ -1,0 +1,41 @@
+/* ------------------------------ */
+/* Configuration des mediaqueries */
+/* ------------------------------ */
+
+$break-extra-large: 1584px;
+$break-large: 1200px;
+$break-medium: 768px;
+$break-small: 600px;
+
+@mixin responsive($media) {
+  @if $media == xsm_portrait {
+    @media only screen and (max-width: $break-small) and (orientation: portrait) {@content;}
+  }
+  @else if $media == xsm_landscape {
+    @media only screen and (max-width: $break-small) and (orientation: landscape) {@content;}
+  }
+  @else if $media == sm_portrait {
+    @media only screen and (min-width: $break-small) and (orientation: portrait) {@content;}
+  }
+  @else if $media == sm_landscape {
+    @media only screen and (min-width: $break-small) and (orientation: landscape) {@content;}
+  }
+  @else if $media == md_portrait {
+    @media only screen and (min-width: $break-medium) and (orientation: portrait) {@content;}
+  }
+  @else if $media == md_landscape {
+    @media only screen and (min-width: $break-medium) and (orientation: landscape) {@content;}
+  }
+  @else if $media == lg_portrait {
+    @media only screen and (min-width: $break-large) and (orientation: portrait) {@content;}
+  }
+  @else if $media == lg_landscape {
+    @media only screen and (min-width: $break-large) and (orientation: landscape) {@content;}
+  }
+  @else if $media == elg_portrait {
+    @media only screen and (min-width: $break-extra-large) and (orientation: portrait) {@content;}
+  }
+  @else if $media == elg_landscape {
+    @media only screen and (min-width: $break-extra-large) and (orientation: landscape) {@content;}
+  }
+}

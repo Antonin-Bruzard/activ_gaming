@@ -1,0 +1,21 @@
+.editor {
+  color:#ffffff;
+  .menubar {
+    button {
+      background-color: $buttonBackground;
+      color: $buttonColor;
+      padding: .5rem .8rem;
+      border: none;
+      border-radius: .3rem;
+
+      &:hover {
+        background-color: $buttonBackgroundHover;
+      }
+    }
+  }
+
+  .editor__content {
+    background-color: $contentBackground;
+    color: #000;
+  }
+}

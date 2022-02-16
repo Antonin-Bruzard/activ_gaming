@@ -1,0 +1,3 @@
+[submodule "jwt-auth"]
+	path = jwt-auth
+	url = ./vendor/tymon/jwt-auth

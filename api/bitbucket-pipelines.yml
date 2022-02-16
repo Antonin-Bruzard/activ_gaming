@@ -1,0 +1,44 @@
+# This is a sample build configuration for PHP.
+# Check our guides at https://confluence.atlassian.com/x/e8YWN for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: php:7.2
+
+pipelines:
+  custom: #Pipelines that can only be triggered manually
+    init-dev:
+      - step:
+         deployment: Dev
+         script:
+          # ec2-34-236-25-177.compute-1.amazonaws.com[34.236.25.177]
+          - apt-get update
+          - apt-get -qq install git-ftp
+          - git ftp init --user $USER --passwd $PASSWORD ftp://activ-gaming.com:1980
+          # Récupérer la version en ligne
+          - apt install wget
+          - wget --no-check-certificate https://dev.activ-gaming.com/version.php
+          - VERSION=$(< version.php)
+          - echo $VERSION
+      
+    deploy-to-dev:
+      - step:
+         deployment: Dev
+         script:
+          # ec2-52-203-14-55.compute-1.amazonaws.com[52.203.14.55]
+          # IP RANGE A VÉRIFIER . https://whoer.net/checkwhois
+          # EST-CE TOUJOURS LE MÊME SERVEUR POUR UNE PIPELINE ?
+          - apt-get update
+          - apt-get -qq install git-ftp
+          - git ftp push --user $USER --passwd $PASSWORD ftp://activ-gaming.com:1980 --all
+          # Récupérer la version en ligne
+          - apt install wget
+          - wget --no-check-certificate https://dev.activ-gaming.com/version.php
+          - VERSION=$(< version.php)
+          - echo $VERSION
+
+    deploy-to-prod:
+      - step:
+          deployment: Production
+          script:
+            -  echo 'Desploy to prod!'

@@ -1,0 +1,167 @@
+.news-slider {
+  position: relative;
+  overflow: hidden;
+
+  div {
+    height: 100%;
+  }
+
+
+}
+
+.news-slider-nav {
+  transition:.2s!important;
+  background-color: #902d2f;
+  height: 550px!important;
+  height: 25%;
+  overflow: hidden;
+
+  .article-date {
+    color: white;
+  }
+}
+
+.article-little:nth-child(1n+2){
+  border-top: 1px solid $backgroundColor03;
+}
+
+
+
+
+.news-slider-nav > div {
+  margin: 0;
+  padding: 0;
+  height: 25%;
+}
+
+.news-slider-nav:nth-child(1n+2) {
+  border-top: 1px solid $backgroundColor03;
+}
+
+
+.last-news {
+  height: 550px;
+  color: #AFAFAF;
+  background-color: $backgroundColor01;
+
+  article {
+    margin: 0;
+    height: 550px;
+    outline:none;
+
+
+    div {
+      overflow: auto;
+      max-height:275px;
+    }
+
+    h3 {
+      color: #EBEBEB;
+    }
+
+    img {
+      width: 100%;
+      height: 50%;
+      background-size: cover;
+      background-position: center;
+    }
+
+    a {
+      color: #782729;
+      font-size: 18px;
+
+      &:hover {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 18px;
+      }
+    }
+  }
+
+  aside {
+    height: 550px;
+
+    h3 {
+      color: #EBEBEB;
+    }
+  }
+
+  aside > div {
+    width: 100%;
+    background-color: $backgroundColor01;
+    transition: .2s;
+    outline:none;
+  }
+
+}
+
+.fade-enter-active, .fade-leave-active {
+/*   transition: opacity display 1s;*/
+ }
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+  display:none;
+}
+
+.article-aside {
+  padding: 0;
+
+  .article-little {
+    height:25%;
+    font-size: 16px;
+    outline:none;
+    transition: .2s;
+    display: flex;
+    justify-content: space-between;
+    color: #afafaf;
+    background-color: $backgroundColor01;
+
+    &.active {
+      background: #902d2f!important;
+
+      .article-date {
+        color: #EBEBEB!important;
+
+      }
+    }
+
+    h3{
+      font-size: 20px;
+      color: #EBEBEB;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: $backgroundColor03;
+      transition: .2s;
+    }
+
+    .article-img {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 4px;
+      margin-right: 10px;
+      width: 25%;
+    }
+
+    .article-content {
+      width: 75%;
+      p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .article-date {
+        color: #902d2f;
+        transition: .2s;
+      }
+    }
+  }
+
+  .article-little > div {
+    width: 100%;
+    padding: 10px;
+  }
+}

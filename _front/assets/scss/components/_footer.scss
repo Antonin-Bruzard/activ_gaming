@@ -1,0 +1,33 @@
+
+footer {
+  bottom:0;
+  background-color: $backgroundColor01;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  .social-partners {
+    margin: 0;
+
+    ul {
+      height: 50px;
+    }
+
+    li {
+      vertical-align: center;
+      background-color: $backgroundColor04;
+      width: 50px;
+      height: 50px;
+      font-size: 27px;
+      margin-right: 10px;
+    }
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

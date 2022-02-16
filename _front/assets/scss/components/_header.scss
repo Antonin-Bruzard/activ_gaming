@@ -1,0 +1,163 @@
+.top-header-navbar {
+   position: fixed;
+   top:0;
+   z-index: 5;
+   width: 100%;
+   transition: .3s;
+   opacity: .8;
+   background-color: $backgroundColor01;
+   height: 2rem;
+   display: flex;
+   justify-content: space-between;
+
+ &:hover {
+   opacity: 1;
+   transition: .3s;
+ }
+
+ .userbar {
+   width: 10vw;
+   height: 2rem;
+
+   a {
+     color: white;
+     height: 2rem;
+   }
+
+   ul {
+     display: flex;
+     justify-content: space-around;
+     list-style-type: none;
+   }
+
+   .user-interface {
+     height: 2rem;
+     position: fixed;
+     right:0;
+     background-color: rgba(0, 0, 0, .2);
+     z-index: 5;
+
+     li:hover {
+       background-color: rgba(0, 0, 0, .5);
+     }
+   }
+
+   .user-menu {
+     background-color: $backgroundColor01;
+
+     li {
+       background-color: $backgroundColor01;
+       color: white;
+
+       &:hover {
+         background-color: $backgroundColor03;
+       }
+     }
+
+     img {
+       border-radius: 50px;
+       width: 23px;
+       height: 23px;
+       object-fit: cover;
+     }
+
+     a {
+       color: white;
+
+       &:hover {
+         background-color: $backgroundColor03;
+       }
+     }
+
+     .dropdown {
+       height: 2rem;
+       margin-top: -3px;
+       background-color: $backgroundColor01;
+     }
+
+     .dropdown-menu {
+       display: none;
+
+       &.show {
+         display: block;
+         background-color: $backgroundColor01;
+       }
+     }
+
+     .dropdown-toggle {
+       padding: 4px 8px;
+       background-color: rgba(0, 0, 0, .2);
+
+       &:hover {
+         background-color: rgba(0, 0, 0, .5);
+       }
+     }
+   }
+
+ }
+}
+
+
+  .main-navbar {
+    background-color: rgba(0, 0, 0, .8);
+    margin-top: 6rem;
+    padding:10px 250px ;
+    height: 120px;
+    display: flex;
+    flex-wrap: nowrap;
+
+    .brand {
+      display: flex;
+      align-items: center;
+
+      .brand-logo {
+        width: auto;
+        height: 85px;
+        margin-right: 20px;
+      }
+
+      .brand-name {
+        text-transform: uppercase;
+        color: white;
+        font-size: 2.5rem;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+      }
+    }
+
+    .main-nav {
+      flex:2;
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+
+      a {
+        color:white!important;
+        font-family: 'Comfortaa', sans-serif;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        font-weight: 400;
+        padding-left: 30px;
+        transition: 0.2s;
+
+        &:hover {
+          transition: 0.2s;
+          color: $aHoverRed!important;
+        }
+      }
+    }
+  }
+
+ #modalConnection {
+   .modal-content {
+     background-color: $backgroundColor01;
+     color: white;
+   }
+ }
+
+ #modalRegister {
+   .modal-content {
+     background-color: $backgroundColor01;
+     color: white;
+   }
+ }

@@ -1,0 +1,50 @@
+
+.social-partners {
+  list-style-type: none;
+  display: flex;
+  text-align: center;
+
+  ul {
+    height: 32px;
+  }
+
+  li {
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+  }
+
+  a {
+    display: block;
+    color: white;
+    height: 100%;
+
+    &.facebook:hover {
+      background-color: #3b5998;
+    }
+
+    &.twitch:hover {
+      background-color: #6441a5;
+    }
+
+    &.twitter:hover {
+      background-color: #00acee;
+    }
+
+    &.youtube:hover {
+      background-color: #c4302b;
+    }
+
+    &.teamspeak:hover {
+      background-color: #1a2233;
+    }
+
+    &.discord:hover {
+      background-color: #7289da;
+    }
+  }
+}
+
+
+
+

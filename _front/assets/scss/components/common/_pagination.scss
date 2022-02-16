@@ -1,0 +1,17 @@
+.pagination {
+  .page-item {
+    .page-link {
+      background-color: $backgroundColor03;
+      color: $titleColor;
+      border: none;
+      font-weight: bold;
+    }
+
+    &.disabled {
+      background-color: $backgroundColor03;
+      .page-link {
+        color: #6c757d;
+      }
+    }
+  }
+}
